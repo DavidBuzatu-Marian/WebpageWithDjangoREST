@@ -26,9 +26,9 @@ SECRET_KEY = "l0gi8b-62c6q9)%&87zs=zxh6_gil^_*z98dg41j&-2h2^r8!o"
 SECRET_KEY = os.environ.get(
     'DJANGO_SECRET_KEY', 'l0gi8b-62c6q9)%&87zs=zxh6_gil^_*z98dg41j&-2h2^r8!o')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -134,8 +134,6 @@ DATABASES['default'].update(db_from_env)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
